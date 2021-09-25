@@ -1,0 +1,5 @@
+[tool.poetry]
+name = "digitex-rest-python"
+version = "0.0.1"
+description = "Digitex REST trading API Python client"
+authors = ["Sergiy Pavlyuk <spavlyuk@digitex.io"]
