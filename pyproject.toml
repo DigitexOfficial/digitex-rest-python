@@ -3,3 +3,12 @@ name = "digitex-rest-python"
 version = "0.0.1"
 description = "Digitex REST trading API Python client"
 authors = ["Sergiy Pavlyuk <spavlyuk@digitex.io"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+urllib3 = "^1.26.7"
+python-dateutil = "^2.8.2"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.2.0"
+sphinx-rtd-theme = "^1.0.0"
