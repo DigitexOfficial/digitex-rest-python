@@ -1,6 +1,8 @@
-#Digitex REST python client
+Digitex REST python client
+----------------
 
-##Getting Started
+**Getting Started**
+
 
 [API description can be found here](https://digitexofficial.github.io/rest-api-docs/)
 
@@ -33,7 +35,7 @@ pip install path/to/Digitex/Client
 
 
 
-##Register at Digitex
+**Register at Digitex**
 
 In order to start, one has to register either at
 [https://testnet.digitexfutures.com](https://testnet.digitexfutures.com)
