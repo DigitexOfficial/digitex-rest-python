@@ -50,7 +50,7 @@ If you have already created your token, you can simply copy it, else click on "C
 **IMPORTANT NOTES!**
 
     - All of the data which is expected to be float or decimal are passed as strings in the API. Data is converted into Decimal format on the client level
-    - All timestamps are in nanoseconds UTC
+    - All timestamps are in microseconds UTC
 
 Enums, such as order types, status etc can be found in Exchange Meta Data group of endpoints in the API
 or in the `Get Exchange Info <public.html#dgtx.public.PublicApiClient.get_exchange_info>`_ method of this client
@@ -69,7 +69,7 @@ Initialise the client
 Basic Usage
 -----------------
 
-After you initialised the clien you can simply call one of the methods with arguments,
+After you initialised the client you can simply call one of the methods with arguments,
 if they are available:
 
 
@@ -81,11 +81,11 @@ if they are available:
 
 This prints human readable representation of the method call:
 
-.. code-block:: json
+.. code-block:: python
 
     {
         "message":"pong",
-        "timestamp": 1632567734971007 // in nanoseconds
+        "timestamp": 1632567734971007 # in microseconds
     }
 
 

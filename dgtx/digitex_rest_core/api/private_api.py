@@ -1,7 +1,7 @@
 """
     Digitex Rest Trading API
 
-    <br> <h4>Digitex's REST trading api specification</h4>  In order to start, one has to register either at https://testnet.digitexfutures.com for testnet (virtual funds trading) or at https://digitex.io - our mainnet (real money trading).  After registration you need to obtain your trading token in your account.  Direct links to the account page: - testnet - https://testnet.digitexfutures.com/profile/account - mainet - https://digitex.io/trade/profile/account  If you have already created your token, you can simply copy it, else click on \"Create\" in the API section of your account.   IMPORTANT NOTES!  - All of the data which is expected to be float or decimal are passed as strings. Data is converted into Decimal/float format on the client level - All timestamps are in nanoseconds UTC - Enums, such as order types, status etc can be found in Exchange-Meta-Data group of endpoints  # noqa: E501
+    <br> <h4>Digitex's REST trading api specification</h4>  In order to start, one has to register either at https://testnet.digitexfutures.com for testnet (virtual funds trading) or at https://digitex.io - our mainnet (real money trading).  After registration you need to obtain your trading token in your account.  Direct links to the account page: - testnet - https://testnet.digitexfutures.com/profile/account - mainet - https://digitex.io/trade/profile/account  If you have already created your token, you can simply copy it, else click on \"Create\" in the API section of your account.   IMPORTANT NOTES!  - All of the data which is expected to be float or decimal are passed as strings. Data is converted into Decimal/float format on the client level - All timestamps are in microseconds UTC - Enums, such as order types, status etc can be found in Exchange-Meta-Data group of endpoints  # noqa: E501
 
     The version of the OpenAPI document: 0.0.1
     Contact: spavlyuk@digitex.io
@@ -167,8 +167,8 @@ class PrivateApi(object):
 
 
             Keyword Args:
-                created_at_from (int): Timestamp in nanoseconds. Filters for order created at or after this timestamp. [optional]
-                created_at_to (str): Timestamp in nanoseconds. Filters for orders created before this timestamp. [optional]
+                created_at_from (int): Timestamp in microseconds. Filters for order created at or after this timestamp. [optional]
+                created_at_to (str): Timestamp in microseconds. Filters for orders created before this timestamp. [optional]
                 cursor (str): cursor for fetching pages. [optional]
                 market_id (int): Id of a market. [optional]
                 page_size (int): Amount of order displayed per page. [optional]
@@ -696,8 +696,8 @@ class PrivateApi(object):
 
 
             Keyword Args:
-                traded_at_from (int): Timestamp in nanoseconds. [optional]
-                traded_at_to (int): Timestamp in nanoseconds. Only return contracts traded before this time.. [optional]
+                traded_at_from (int): Timestamp in microseconds. [optional]
+                traded_at_to (int): Timestamp in microseconds. Only return contracts traded before this time.. [optional]
                 cursor (str): Cursor for fetching pages in pagination. [optional]
                 market_id (int): Id of a market. [optional]
                 page_size (int): size of a paginator page. [optional]

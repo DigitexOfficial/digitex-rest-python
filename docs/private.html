@@ -183,8 +183,8 @@ These are orders with statuses; FILLED, CANCELED or REJECTED</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>created_at_from</strong> (<em>str</em><em>, </em><em>optional</em>) – timestamp in nanoseconds. Returns order created after this ts</p></li>
-<li><p><strong>created_at_to</strong> (<em>str</em><em>, </em><em>optional</em>) – timestamp in nanoseconds. Returns order created before this ts</p></li>
+<li><p><strong>created_at_from</strong> (<em>str</em><em>, </em><em>optional</em>) – timestamp in microseconds. Returns order created after this ts</p></li>
+<li><p><strong>created_at_to</strong> (<em>str</em><em>, </em><em>optional</em>) – timestamp in microseconds. Returns order created before this ts</p></li>
 <li><p><strong>market_id</strong> (<em>int</em><em>, </em><em>optional</em>) – Return orders only for this market id</p></li>
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of items on a page.</p></li>
 <li><p><strong>cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – return trades from this page (response.next, response.previous)</p></li>
@@ -365,8 +365,8 @@ Show only orders in status: ACCEPTED, FILLED, PARTIAL</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>traded_at_from</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp in nanoseconds. Return only trades from this ts</p></li>
-<li><p><strong>traded_at_to</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp in nanoseconds. Return only trades prior to this ts</p></li>
+<li><p><strong>traded_at_from</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp in microseconds. Return only trades from this ts</p></li>
+<li><p><strong>traded_at_to</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp in microseconds. Return only trades prior to this ts</p></li>
 <li><p><strong>market_id</strong> (<em>int</em><em>, </em><em>optional</em>) – market id. Return only trades for this market</p></li>
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of items on a page.</p></li>
 <li><p><strong>cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – return trades from this page (response.next, response.previous)</p></li>

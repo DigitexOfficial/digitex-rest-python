@@ -21,4 +21,4 @@ print(ping)
 # return instance in most of the cases is a python class
 # which allows to access its properties directly
 if not isinstance(ping, ApiException):
-    print(f"Current server time in nanoseconds is {ping.timestamp}")
+    print(f"Current server time in microseconds is {ping.timestamp}")

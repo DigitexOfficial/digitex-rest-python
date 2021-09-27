@@ -41,7 +41,7 @@ Helper class to create cancel order message. Is used with client.cancel_order me
 ^^^^^^^^^^^^^^
 
 Helper class to indicate OrderSide. Accepts ints as input.
-Possible values can be found at `client.get_exchange_info().order_meta <http://localhost:63342/digitex-rest-python/docs/build/public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
+Possible values can be found at `client.get_exchange_info().order_meta <public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
 
 
 Current value list:
@@ -67,7 +67,7 @@ Example usage:
 ^^^^^^^^^^^^^^^^
 
 Helper class to indicate Order Duration. Accepts ints as input.
-Possible values can be found at `client.get_exchange_info().order_meta <http://localhost:63342/digitex-rest-python/docs/build/public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
+Possible values can be found at `client.get_exchange_info().order_meta <public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
 
 
 .. code:: python
@@ -94,7 +94,7 @@ Example usage:
 ^^^^^^^^^^^^^^
 
 Helper class to indicate Order Type. Accepts ints as input.
-Possible values can be found at `client.get_exchange_info().order_meta <http://localhost:63342/digitex-rest-python/docs/build/public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
+Possible values can be found at `client.get_exchange_info().order_meta <public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
 
 Current value list:
 
@@ -119,7 +119,7 @@ Example usage:
 ^^^^^^^^^^^^^^
 
 Helper class to indicate Order Status. Accepts ints as input.
-Possible values can be found at `client.get_exchange_info().order_meta <http://localhost:63342/digitex-rest-python/docs/build/public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
+Possible values can be found at `client.get_exchange_info().order_meta <public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
 
 Current value list:
 

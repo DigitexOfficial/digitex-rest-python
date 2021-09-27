@@ -113,7 +113,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>All of the data which is expected to be float or decimal are passed as strings in the API. Data is converted into Decimal format on the client level</p></li>
-<li><p>All timestamps are in nanoseconds UTC</p></li>
+<li><p>All timestamps are in microseconds UTC</p></li>
 </ul>
 </div></blockquote>
 <p>Enums, such as order types, status etc can be found in Exchange Meta Data group of endpoints in the API
@@ -137,7 +137,7 @@ if they are available:</p>
 <p>This prints human readable representation of the method call:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
     &quot;message&quot;:&quot;pong&quot;,
-    &quot;timestamp&quot;: 1632567734971007 // in nanoseconds
+    &quot;timestamp&quot;: 1632567734971007 // in microseconds
 }
 </pre></div>
 </div>

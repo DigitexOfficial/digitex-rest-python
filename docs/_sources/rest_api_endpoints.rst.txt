@@ -7,7 +7,7 @@ Public Endpoints
 `Ping <public.html#dgtx.public.PublicApiClient.ping>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pings the Digitex server and returns server timestamp in nanoseconds.
+Pings the Digitex server and returns server timestamp in microseconds.
 Is used only to check whether server is alive.
 
 

@@ -1,7 +1,7 @@
 """
     Digitex Rest Trading API
 
-    <br> <h4>Digitex's REST trading api specification</h4>  In order to start, one has to register either at https://testnet.digitexfutures.com for testnet (virtual funds trading) or at https://digitex.io - our mainnet (real money trading).  After registration you need to obtain your trading token in your account.  Direct links to the account page: - testnet - https://testnet.digitexfutures.com/profile/account - mainet - https://digitex.io/trade/profile/account  If you have already created your token, you can simply copy it, else click on \"Create\" in the API section of your account.   IMPORTANT NOTES!  - All of the data which is expected to be float or decimal are passed as strings. Data is converted into Decimal/float format on the client level - All timestamps are in nanoseconds UTC - Enums, such as order types, status etc can be found in Exchange-Meta-Data group of endpoints  # noqa: E501
+    <br> <h4>Digitex's REST trading api specification</h4>  In order to start, one has to register either at https://testnet.digitexfutures.com for testnet (virtual funds trading) or at https://digitex.io - our mainnet (real money trading).  After registration you need to obtain your trading token in your account.  Direct links to the account page: - testnet - https://testnet.digitexfutures.com/profile/account - mainet - https://digitex.io/trade/profile/account  If you have already created your token, you can simply copy it, else click on \"Create\" in the API section of your account.   IMPORTANT NOTES!  - All of the data which is expected to be float or decimal are passed as strings. Data is converted into Decimal/float format on the client level - All timestamps are in microseconds UTC - Enums, such as order types, status etc can be found in Exchange-Meta-Data group of endpoints  # noqa: E501
 
     The version of the OpenAPI document: 0.0.1
     Contact: spavlyuk@digitex.io
@@ -151,12 +151,12 @@ class ExchangeRecentTrade(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timestamp (int): timestamp of the order in nanoseconds. [optional]  # noqa: E501
+            timestamp (int): timestamp of the order in microseconds. [optional]  # noqa: E501
             base_volume (str): If spot - base volume of currency. If fututes - number of contracts.. [optional]  # noqa: E501
             quote_volume (str): If spot - amount of quote currency. If futures - \"notional\" amount - (base_volume/quantity of contracts) * price. [optional]  # noqa: E501
             price (str): Price at which trade was executed. [optional]  # noqa: E501
             side (OrderSide): [optional]  # noqa: E501
-            trade_id (int): internal trade id, used only to differentiate orders if they traded at the same nanosecod. [optional]  # noqa: E501
+            trade_id (int): internal trade id, used only to differentiate orders if they traded at the same microsecod. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,12 +238,12 @@ class ExchangeRecentTrade(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timestamp (int): timestamp of the order in nanoseconds. [optional]  # noqa: E501
+            timestamp (int): timestamp of the order in microseconds. [optional]  # noqa: E501
             base_volume (str): If spot - base volume of currency. If fututes - number of contracts.. [optional]  # noqa: E501
             quote_volume (str): If spot - amount of quote currency. If futures - \"notional\" amount - (base_volume/quantity of contracts) * price. [optional]  # noqa: E501
             price (str): Price at which trade was executed. [optional]  # noqa: E501
             side (OrderSide): [optional]  # noqa: E501
-            trade_id (int): internal trade id, used only to differentiate orders if they traded at the same nanosecod. [optional]  # noqa: E501
+            trade_id (int): internal trade id, used only to differentiate orders if they traded at the same microsecod. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

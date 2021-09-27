@@ -126,9 +126,9 @@ class PrivateApiClient(metaclass=ClientMeta):
         """
         Get trade history.
 
-        :param int, optional traded_at_from: timestamp in nanoseconds. Return only trades from this ts
+        :param int, optional traded_at_from: timestamp in microseconds. Return only trades from this ts
 
-        :param int, optional traded_at_to: timestamp in nanoseconds. Return only trades prior to this ts
+        :param int, optional traded_at_to: timestamp in microseconds. Return only trades prior to this ts
 
         :param int, optional market_id:  market id. Return only trades for this market
 
@@ -172,9 +172,9 @@ class PrivateApiClient(metaclass=ClientMeta):
         Get trader's order history. Returns orders that are no longer in execution.
         These are orders with statuses; FILLED, CANCELED or REJECTED
 
-        :param str, optional created_at_from: timestamp in nanoseconds. Returns order created after this ts
+        :param str, optional created_at_from: timestamp in microseconds. Returns order created after this ts
 
-        :param str, optional created_at_to: timestamp in nanoseconds. Returns order created before this ts
+        :param str, optional created_at_to: timestamp in microseconds. Returns order created before this ts
 
         :param int, optional market_id: Return orders only for this market id
 

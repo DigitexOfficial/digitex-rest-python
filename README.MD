@@ -55,4 +55,4 @@ If you have already created your token, you can simply copy it, else click on "C
 
 1. All of the data which is expected to be float or decimal are passed as strings in the API. Data is converted into Decimal format on the client level 
    
-2. All timestamps are in nanoseconds UTC
+2. All timestamps are in microseconds UTC
