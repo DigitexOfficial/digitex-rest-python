@@ -6,6 +6,8 @@ Digitex REST python client
 
 [API description can be found here](https://digitexofficial.github.io/rest-api-docs/)
 
+[Documentation for the client can be found here](https://digitexofficial.github.io/digitex-rest-python/)
+
 Example folder contains some usage examples for each method
 
 **Installation**
