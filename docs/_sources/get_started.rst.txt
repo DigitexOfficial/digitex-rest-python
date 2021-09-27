@@ -69,7 +69,7 @@ Initialise the client
 Basic Usage
 -----------------
 
-After you initialised the clien you can simply call one of the methods with arguments,
+After you initialised the client you can simply call one of the methods with arguments,
 if they are available:
 
 
@@ -81,11 +81,11 @@ if they are available:
 
 This prints human readable representation of the method call:
 
-.. code-block:: json
+.. code-block:: python
 
     {
         "message":"pong",
-        "timestamp": 1632567734971007 // in microseconds
+        "timestamp": 1632567734971007 # in microseconds
     }
 
 

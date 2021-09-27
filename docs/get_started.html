@@ -128,17 +128,17 @@ or in the <a class="reference external" href="public.html#dgtx.public.PublicApiC
 </section>
 <section id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h2>
-<p>After you initialised the clien you can simply call one of the methods with arguments,
+<p>After you initialised the client you can simply call one of the methods with arguments,
 if they are available:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ping_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ping</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ping_response</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This prints human readable representation of the method call:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
-    &quot;message&quot;:&quot;pong&quot;,
-    &quot;timestamp&quot;: 1632567734971007 // in microseconds
-}
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span><span class="s2">&quot;pong&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632567734971007</span> <span class="c1"># in microseconds</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Unless stated otherwise and in most of the cases, the method output is either a list of data models
