@@ -71,9 +71,9 @@ client = Client(
 # print(recent_trades)
 #
 # # ohlcv or klines
-
-ohlc = client.get_k_lines(market_id=1, resolution='1D')
-print(ohlc)
+#
+# ohlc = client.get_k_lines(market_id=1, resolution='1D')
+# print(ohlc)
 
 
 # #################################
@@ -121,14 +121,14 @@ print(ohlc)
 
 # cancel order
 
-# get order to cancel
-orders = client.get_orders()
-# print(orders)
-#
-orders_to_cancel = CancelOrder(
-    market_id=1,  # unique order id is insured only per market level
-    orders_client_ids=[i.client_id for i in orders.results]  # list of orders to cancel
-)
+# # get order to cancel
+# orders = client.get_orders()
+# # print(orders)
+# #
+# orders_to_cancel = CancelOrder(
+#     market_id=1,  # unique order id is insured only per market level
+#     orders_client_ids=[i.client_id for i in orders.results]  # list of orders to cancel
+# )
 #
 # cancel_order = client.cancel_order(orders_to_cancel)
 # print(cancel_order)

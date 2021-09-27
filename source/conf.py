@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Digitex Python REST client'
-copyright = '2021, Sergiy Pavlyuk'
-author = 'Sergiy Pavlyuk'
+copyright = '2021, Digitex'
+author = 'Sergiy Pavlyuk spavlyuk@digitex.io'
 
 
 # -- General configuration ---------------------------------------------------

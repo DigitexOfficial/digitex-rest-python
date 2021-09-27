@@ -2,7 +2,7 @@ Helper Classes
 =================
 
 `PlaceOrderMeta`
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 Helper class to create an order. Is used when calling client.place_order
 
@@ -46,7 +46,7 @@ Possible values can be found at `client.get_exchange_info().order_meta <http://l
 
 Current value list:
 
-.. code:: json
+.. code:: python
 
         {'side':
                 {'BUY': 1,
@@ -64,13 +64,13 @@ Example usage:
 
 
 `OrderDuration`
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 Helper class to indicate Order Duration. Accepts ints as input.
 Possible values can be found at `client.get_exchange_info().order_meta <http://localhost:63342/digitex-rest-python/docs/build/public.html#dgtx.public.PublicApiClient.get_exchange_info>`_
 
 
-.. code:: json
+.. code:: python
 
         {'duration': {'DURATION_UNDEFINED': 0,
                                      'FOK': 5,
@@ -98,7 +98,7 @@ Possible values can be found at `client.get_exchange_info().order_meta <http://l
 
 Current value list:
 
-.. code:: json
+.. code:: python
 
         {'type':
                 {'LIMIT': 1,
@@ -123,7 +123,7 @@ Possible values can be found at `client.get_exchange_info().order_meta <http://l
 
 Current value list:
 
-.. code:: json
+.. code:: python
 
         {'status': {'ACCEPTED': 2,
                    'CANCELED': 4,
