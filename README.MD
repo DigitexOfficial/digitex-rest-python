@@ -18,6 +18,8 @@ at the moment.
 
 ***Option 1.*** Install from git directly
 ```
+pip install git+https://github.com/DigitexOfficial/digitex-rest-python.git
+# or install master
 pip install git+https://github.com/DigitexOfficial/digitex-rest-python.git@master
 # or if for some reason you want to use dev version
 pip install git+https://github.com/DigitexOfficial/digitex-rest-python.git@development
