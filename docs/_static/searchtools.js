@@ -293,7 +293,7 @@ var Search = {
                     }, 5);
                   }});
         } else {
-          // no source available, just display title
+          // no docsrc available, just display title
           Search.output.append(listItem);
           setTimeout(function() {
             displayNextItem();

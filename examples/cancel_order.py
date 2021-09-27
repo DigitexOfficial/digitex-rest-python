@@ -10,7 +10,7 @@ from dgtx.digitex_rest_core.model.cancel_order import CancelOrder
 
 client = Client(
     api_client=Client.testnet,
-    api_key='4384ac7676cf1254e95366977c3747ca24b5295a'
+    api_key='PUT-YOUR-API-TOKEN-HERE'
 )
 
 # get order to cancel
