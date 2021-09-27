@@ -6,7 +6,7 @@ Digitex REST python client
 
 [API description can be found here](https://digitexofficial.github.io/rest-api-docs/)
 
-Example folder contains some usage examaples for each method
+Example folder contains some usage examples for each method
 
 **Installation**
 
@@ -16,7 +16,9 @@ at the moment.
 
 ***Option 1.*** Install from git directly
 ```
-pip install git@github.com:DigitexOfficial/digitex-rest-python.git@master
+pip install git+https://github.com/DigitexOfficial/digitex-rest-python.git@master
+# or if for some reason you want to use dev version
+pip install git+https://github.com/DigitexOfficial/digitex-rest-python.git@development
 ```
 ***Option 2.*** Clone repository to the folder of your choice and then install locally.
 This could be a better choice for users that want to try files in the
@@ -27,13 +29,26 @@ git clone git@github.com:DigitexOfficial/digitex-rest-python.git@master
 ```
 
 Then install Digitex client into your current project folder/virtual
-environment
+environment.
 
 ```
 pip install path/to/Digitex/Client
 ```
 
+**Basic Usage**
 
+Init the client:
+```
+from dgtx.client import Client
+
+client = Client(
+    api_client=Client.testnet, # or Client.mainnet
+    api_key='PUT-YOUR-API-TOKEN-HERE'
+)
+
+client.ping()
+
+```
 
 **Register at Digitex**
 
