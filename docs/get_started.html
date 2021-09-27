@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; Digitex Python REST client  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rest API Endpoints" href="rest_api_endpoints.html" />
+    <link rel="prev" title="Welcome to Digitex API Library’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Digitex Python REST client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api-description">API Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#register-at-digitex">Register at Digitex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initialise-the-client">Initialise the client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api_endpoints.html">Rest API Endpoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public.html">Public Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private.html">Private Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helper Classes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Digitex Python REST client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/get_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<section id="api-description">
+<h2>API Description<a class="headerlink" href="#api-description" title="Permalink to this headline"></a></h2>
+<p>API description can be found <a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/">here</a></p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<p>Current version of REST client is in test mode only, therefore it is available as github repository only at the moment.</p>
+<p><strong>Option 1. Install from git directly</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">DigitexOfficial</span><span class="o">/</span><span class="n">digitex</span><span class="o">-</span><span class="n">rest</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p><strong>Option 2. Clone repository to the folder of your choice and then install locally. This could be a better choice for users that want to try files in the example folder</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">DigitexOfficial</span><span class="o">/</span><span class="n">digitex</span><span class="o">-</span><span class="n">rest</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p>Then install Digitex client into your current project folder/virtual environment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">Digitex</span><span class="o">/</span><span class="n">Client</span>
+</pre></div>
+</div>
+</section>
+<section id="register-at-digitex">
+<h2>Register at Digitex<a class="headerlink" href="#register-at-digitex" title="Permalink to this headline"></a></h2>
+<p>In order to start, one has to register either at <a class="reference external" href="https://testnet.digitexfutures.com">https://testnet.digitexfutures.com</a> for testnet (virtual funds trading) or at <a class="reference external" href="https://digitex.io">https://digitex.io</a> - our mainnet (real money trading).</p>
+<p>After registration you need to obtain your trading token in your account.</p>
+<p>Direct links to the account page:</p>
+<ul class="simple">
+<li><p>testnet - <a class="reference external" href="https://testnet.digitexfutures.com/profile/account">https://testnet.digitexfutures.com/profile/account</a></p></li>
+<li><p>mainet - <a class="reference external" href="https://digitex.io/trade/profile/account">https://digitex.io/trade/profile/account</a></p></li>
+</ul>
+<p>If you have already created your token, you can simply copy it, else click on “Create” in the API section of your account.</p>
+<p><strong>IMPORTANT NOTES!</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>All of the data which is expected to be float or decimal are passed as strings in the API. Data is converted into Decimal format on the client level</p></li>
+<li><p>All timestamps are in microseconds UTC</p></li>
+</ul>
+</div></blockquote>
+<p>Enums, such as order types, status etc can be found in Exchange Meta Data group of endpoints in the API
+or in the <a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_exchange_info">Get Exchange Info</a> method of this client</p>
+</section>
+<section id="initialise-the-client">
+<h2>Initialise the client<a class="headerlink" href="#initialise-the-client" title="Permalink to this headline"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dgtx.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">Client</span><span class="o">.</span><span class="n">testnet</span><span class="p">,</span> <span class="n">api_ket</span> <span class="o">=</span> <span class="s1">&#39;YOUR_TRADING_API_KET&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h2>
+<p>After you initialised the client you can simply call one of the methods with arguments,
+if they are available:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ping_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ping</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ping_response</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This prints human readable representation of the method call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span><span class="s2">&quot;pong&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632567734971007</span> <span class="c1"># in microseconds</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Unless stated otherwise and in most of the cases, the method output is either a list of data models
+or a data model. This will allow you to call data model properties directly without the need
+to convert json to e.g. dictionary and allows you to use dot-notation when calling the arguments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ping_response</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Digitex API Library’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rest_api_endpoints.html" class="btn btn-neutral float-right" title="Rest API Endpoints" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Digitex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

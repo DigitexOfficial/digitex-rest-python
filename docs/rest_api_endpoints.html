@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rest API Endpoints &mdash; Digitex Python REST client  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Public Methods" href="public.html" />
+    <link rel="prev" title="Getting Started" href="get_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Digitex Python REST client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rest API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#public-endpoints">Public Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Currencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Markets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Exchange Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Get Order Book</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Get Recent Trades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Get K-Lines / OHLCV values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#private-endpoints">Private Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Get Account Balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Get Position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Get Trade History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Get Order History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Get Open Orders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Get Order Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Place an order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">Cancel order</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="public.html">Public Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private.html">Private Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helper Classes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Digitex Python REST client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Rest API Endpoints</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rest_api_endpoints.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rest-api-endpoints">
+<h1>Rest API Endpoints<a class="headerlink" href="#rest-api-endpoints" title="Permalink to this headline"></a></h1>
+<section id="public-endpoints">
+<h2>Public Endpoints<a class="headerlink" href="#public-endpoints" title="Permalink to this headline"></a></h2>
+<section id="id1">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.ping">Ping</a><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<p>Pings the Digitex server and returns server timestamp in microseconds.
+Is used only to check whether server is alive.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ping</span><span class="p">():</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_currencies">Currencies</a><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<p>Returns a list of currencies that the use can have a wallet at.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1currency~1/get">Link to API description</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">currencies</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_currencies</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_markets">Markets</a><a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<p>Returns list of markets available to trade.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1markets~1/get">Link to API description</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">markets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_markets</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_exchange_info">Exchange Information</a><a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<p>Returns list of meta data of the exchange, such as list of currencies, list of markets
+and list of order parameters (ENUMS for order types, duration, etc).</p>
+<p>Using integer representation of order parameters is heavily used in our websocket api.
+At one moment in the future we will fully synchronise these two api’s, hence we use
+same approach with order parameters as much as possible in this client. And yes, it would have been much easier to use string
+representation of orders and market names, yet string representation of ‘BUY’ is bigger in size
+then int 1.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Exchange-Meta-Data/paths/~1v1~1exchange~1bot~1exchange_info~1/get">Link to API description</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">exchange_info</span> <span class="o">=</span> <span class="n">get_exchange_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_order_book">Get Order Book</a><a class="headerlink" href="#id7" title="Permalink to this headline"></a></h3>
+<p>Returns order book of selected market</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1order_book~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">order_book</span> <span class="o">=</span> <span class="n">private</span><span class="o">.</span><span class="n">get_order_book</span><span class="p">(</span><span class="n">market_id</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_recent_trades">Get Recent Trades</a><a class="headerlink" href="#id8" title="Permalink to this headline"></a></h3>
+<p>Get recent trades executed at the exchange for selected market</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1recent_trades~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">recent_trades</span> <span class="o">=</span> <span class="n">private</span><span class="o">.</span><span class="n">get_recent_trades</span><span class="p">(</span><span class="n">market_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_trades</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h3><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_k_lines">Get K-Lines / OHLCV values</a><a class="headerlink" href="#id10" title="Permalink to this headline"></a></h3>
+<p>Returns list of K-Lines / OHLCV values for selected market and selected resolution
+with optional date filters</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1history~1ohlcv~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ohlcv</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_k_lines</span><span class="p">(</span><span class="n">market_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;1D&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="private-endpoints">
+<h2>Private Endpoints<a class="headerlink" href="#private-endpoints" title="Permalink to this headline"></a></h2>
+<section id="id12">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_balance">Get Account Balance</a><a class="headerlink" href="#id12" title="Permalink to this headline"></a></h3>
+<p>Get trader’s account balance. In addition to wallet balance, returns available balance per currency -
+balance that is available for trading</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1balances~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_balance</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_balance</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id14">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_position">Get Position</a><a class="headerlink" href="#id14" title="Permalink to this headline"></a></h3>
+<p>Shows current position of the trader in the futures market.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1position~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_position</span><span class="p">():</span>
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_trade_history">Get Trade History</a><a class="headerlink" href="#id16" title="Permalink to this headline"></a></h3>
+<p>Returns paginated trade history</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1trade_history~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">trade_history</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_trade_history</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_order_history">Get Order History</a><a class="headerlink" href="#id18" title="Permalink to this headline"></a></h3>
+<p>Get trader’s order history. Returns orders that are no longer in execution.
+These are orders with statuses:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FILLED - numerical status 5. Order has been fully filled</p></li>
+<li><p>CANCELLED - numerical status 4. Order has been cancelled by user. Note partially filled order can be cancelled as well</p></li>
+<li><p>REJECTED - numerical status 3. Order has been rejected by matching engine.</p></li>
+</ul>
+<p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1order_history~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">order_history</span>  <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_order_history</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_orders">Get Open Orders</a><a class="headerlink" href="#id20" title="Permalink to this headline"></a></h3>
+<p>Get trader’s open orders. Returns orders that are currently in execution.</p>
+<p>These are order with order_status:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>PENDING - numerical status 1 - the order has been recieved, however not yet accepted by the exchange matching engine</p></li>
+<li><p>ACCEPTED - numerical status 2 - the order has been recieved, validated and accepted by the exchange matching engine</p></li>
+<li><p>PARTIAL - numerical status 6 - ACCEPTED + partially filled. Partial filled information and remaining volume are part of the open order information</p></li>
+</ul>
+<p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1orders~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">orders</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_orders</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id22">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_order_status">Get Order Status</a><a class="headerlink" href="#id22" title="Permalink to this headline"></a></h3>
+<p>Get single order status</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1orders~1/get">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">order_status</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_order_status</span><span class="p">(</span><span class="n">order_id</span><span class="o">=</span><span class="s1">&#39;d3c32cc8-89b7-4a4a-8847-7a255e7739ad)</span>
+</pre></div>
+</div>
+</section>
+<section id="id24">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.place_order">Place an order</a><a class="headerlink" href="#id24" title="Permalink to this headline"></a></h3>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1trader~1order~1/post">Link to API</a></p>
+</div></blockquote>
+<p>Create and place a new order. This requires importing some additional classes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dgtx.digitex_rest_core.model.order_duration</span> <span class="kn">import</span> <span class="n">OrderDuration</span>
+<span class="kn">from</span> <span class="nn">dgtx.digitex_rest_core.model.order_side</span> <span class="kn">import</span> <span class="n">OrderSide</span>
+<span class="kn">from</span> <span class="nn">dgtx.digitex_rest_core.model.order_type</span> <span class="kn">import</span> <span class="n">OrderType</span>
+<span class="kn">from</span> <span class="nn">dgtx.extra_data_classes</span> <span class="kn">import</span> <span class="n">PlaceOrderMeta</span>
+
+<span class="n">new_order</span> <span class="o">=</span> <span class="n">PlaceOrderMeta</span><span class="p">(</span>
+    <span class="n">market_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># BTCUSDS Futures</span>
+    <span class="n">side</span><span class="o">=</span><span class="n">OrderSide</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># see order_meta for description</span>
+    <span class="n">duration</span><span class="o">=</span><span class="n">OrderDuration</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="c1"># see order_meta for description</span>
+    <span class="n">leverage</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># desired leverage</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">OrderType</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="c1"># see order_meta for description</span>
+    <span class="n">quantity</span><span class="o">=</span><span class="n">Decimal</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span>
+    <span class="n">price</span><span class="o">=</span><span class="n">Decimal</span><span class="p">(</span><span class="mi">38000</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">placed_order</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">new_order</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>“placed_order” is just confirmation of your order params, not the confirmation
+that the order has been accepted or executed. You can then query order status by calling.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_order_status</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_order_status</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="n">placed_order</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id26">
+<h3><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.cancel_order">Cancel order</a><a class="headerlink" href="#id26" title="Permalink to this headline"></a></h3>
+<p>Cancel order an existing order or orders list or cancel by market_id.
+This requires additional import of CancelOrder data model.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1trader~1order~1cancel~1/post">Link to API</a></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dgtx.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">dgtx.digitex_rest_core.model.cancel_order</span> <span class="kn">import</span> <span class="n">CancelOrder</span>
+
+<span class="c1"># get order to cancel, e.g. all</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_orders</span><span class="p">()</span>
+
+<span class="n">orders_to_cancel</span> <span class="o">=</span> <span class="n">CancelOrder</span><span class="p">(</span>
+    <span class="n">market_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># unique order id is insured only per market level</span>
+    <span class="n">orders_client_ids</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">client_id</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">orders</span><span class="o">.</span><span class="n">results</span><span class="p">]</span>  <span class="c1"># list of orders to cancel</span>
+<span class="p">)</span>
+
+<span class="n">cancelled_orders</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">cancel_order</span><span class="p">(</span><span class="n">orders_to_cancel</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Status of the orders can then be queried with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">order_id</span> <span class="ow">in</span> <span class="n">cancelled_orders</span><span class="o">.</span><span class="n">orders_client_ids</span><span class="p">:</span>
+    <span class="n">my_cancelled_order</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_order_status</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="n">order_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_cancelled_order</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="get_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="public.html" class="btn btn-neutral float-right" title="Public Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Digitex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

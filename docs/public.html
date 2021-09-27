@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Methods &mdash; Digitex Python REST client  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Private Methods" href="private.html" />
+    <link rel="prev" title="Rest API Endpoints" href="rest_api_endpoints.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Digitex Python REST client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api_endpoints.html">Rest API Endpoints</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Public Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private.html">Private Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helper Classes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Digitex Python REST client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Public Methods</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/public.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="public-methods">
+<h1>Public Methods<a class="headerlink" href="#public-methods" title="Permalink to this headline"></a></h1>
+<p>List of publicly available endpoints</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">dgtx.public.</span></span><span class="sig-name descname"><span class="pre">PublicApiClient</span></span><a class="headerlink" href="#dgtx.public.PublicApiClient" title="Permalink to this definition"></a></dt>
+<dd><p>Collection of methods that returns public information from the exchange</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_currencies">
+<span class="sig-name descname"><span class="pre">get_currencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.currency.Currency</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">dgtx.digitex_rest_core.exceptions.ApiException</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_currencies" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of walletable currencies with some extra params</p>
+<p>Each currency instance is a model with the following parameters:</p>
+<ul class="simple">
+<li><p>id - internal currency id</p></li>
+<li><p>name - currency name</p></li>
+<li><p>code - short currency code</p></li>
+<li><p>currency_scale - amount of digits</p></li>
+<li><p>withdraw_fee - amount in currency you pay if you want to use digitex withdrawal service</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>currency_id</strong> – [int] - optional currency id, returns only this currency instance</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of currencies data models</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;DGTX&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Digitex&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+
+    <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)}</span>
+ <span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_exchange_info">
+<span class="sig-name descname"><span class="pre">get_exchange_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.exchange_info.ExchangeInfo</span><span class="p"><span class="pre">,</span> </span><span class="pre">dgtx.digitex_rest_core.exceptions.ApiException</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_exchange_info" title="Permalink to this definition"></a></dt>
+<dd><p>Returns list of available currencies, markets and order meta data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Exchange Info Meta Data</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s1">&#39;currencies&#39;</span><span class="p">:</span> <span class="c1"># list of currencies, same as get currencies</span>
+    <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;DGTX&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Digitex&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+    <span class="o">...</span><span class="p">],</span>
+<span class="s1">&#39;markets&#39;</span><span class="p">:</span> <span class="c1"># list of markets, same as get markets</span>
+    <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
+        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;S:BTCUSDC&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC spot&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="s1">&#39;0E-18&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)}},</span>
+        <span class="p">{</span><span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
+        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;FS:BTCUSD&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+          <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USD future nominated in USDC&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000300000000000000&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+          <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USD USDC&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)}},</span>
+        <span class="o">...</span><span class="p">]</span>
+
+<span class="s1">&#39;notifications&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="o">//</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">exchange</span> <span class="n">announcements</span>
+
+<span class="s1">&#39;order_meta&#39;</span><span class="p">:</span> <span class="c1"># order meta data</span>
+    <span class="p">{</span><span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DURATION_UNDEFINED&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                             <span class="s1">&#39;FOK&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                             <span class="s1">&#39;GFD&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="s1">&#39;GTC&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s1">&#39;GTF&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                             <span class="s1">&#39;IOC&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;LONG&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SHORT&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;UNDEFINED&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;BUY&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SELL&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;ACCEPTED&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+               <span class="s1">&#39;CANCELED&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+               <span class="s1">&#39;FILLED&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+               <span class="s1">&#39;PARTIAL&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+               <span class="s1">&#39;PENDING&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="s1">&#39;REJECTED&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;LIMIT&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;MARKET&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}},</span>
+<span class="s1">&#39;rate_limits&#39;</span><span class="p">:</span> <span class="c1"># not implemented at the moment, but will be soon</span>
+                <span class="p">[{</span><span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;SECOND&#39;</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>
+                 <span class="p">{</span><span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;MINUTE&#39;</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}],</span>
+ <span class="s1">&#39;server_time&#39;</span><span class="p">:</span> <span class="mi">1632607288438219</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_k_lines">
+<span class="sig-name descname"><span class="pre">get_k_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">market_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dgtx.digitex_rest_core.model.ohlcv.OHLCV</span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_k_lines" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of ohlcv values for selected market and timeframe/resolutions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>market_id</strong> (<em>int</em><em>, </em><em>required</em>) – Filtering by number market id. To get market id use “Get list of currently active Markets on exchange” endpoint.</p></li>
+<li><p><strong>resolution</strong> (<em>str</em><em>, </em><em>required</em>) – Symbol resolution. Possible resolutions are daily (D or 1D, 2D … ), weekly (1W, 2W …), monthly (1M, 2M…) and an intra-day resolution – minutes(1, 2 …)</p></li>
+<li><p><strong>date_from</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>utc</em><em>, </em><em>milliseconds</em>) – Unix timestamp (UTC) of the leftmost required bar, including from.</p></li>
+<li><p><strong>date_to</strong> (<em>int</em><em>, </em><em>optional utc</em><em>, </em><em>milliseconds</em>) – Unix timestamp (UTC) of the rightmost required bar, including to. It can be in the future. In this case, the rightmost required bar is the latest available bar.</p></li>
+<li><p><strong>top_n</strong> (<em>int</em><em>, </em><em>optional</em>) – Number which limits the maximum number of answers. (default = 1000)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1617284280000000</span><span class="p">,</span>
+        <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;59020.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;59045.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;58980.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;close&quot;</span><span class="p">:</span> <span class="s2">&quot;58990.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;2129.000000000000000000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1617284340000000</span><span class="p">,</span>
+        <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;58995.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;59030.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;58985.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;close&quot;</span><span class="p">:</span> <span class="s2">&quot;58990.000000000000000000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;315.000000000000000000&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_markets">
+<span class="sig-name descname"><span class="pre">get_markets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.market.Market</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_markets" title="Permalink to this definition"></a></dt>
+<dd><p>Get markets available to trade</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>market_id</strong> – [int] - optional market id, returns just this market</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of markets data class</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                           <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                           <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
+         <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;S:BTCUSDC&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+         <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC spot&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0E-18&#39;</span><span class="p">),</span>
+         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+         <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_order_book">
+<span class="sig-name descname"><span class="pre">get_order_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">market_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dgtx.digitex_rest_core.model.exchange_order_book.ExchangeOrderBook</span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_order_book" title="Permalink to this definition"></a></dt>
+<dd><p>Get current order book of selected market</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>market_id</strong> – id of a market</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>class ExchangeOrderBook, asks/bids can be accessed with dot-notation</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;asks&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2913&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;449&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2914&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3430&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2915&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2525&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2916&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2738&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2928&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3039&#39;</span><span class="p">)]],</span>
+<span class="s1">&#39;bids&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2910&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4570&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2909&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2050&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2079&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;8&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2076&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1070&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)]],</span>
+ <span class="s1">&#39;market_id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+ <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632571422798363</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_recent_trades">
+<span class="sig-name descname"><span class="pre">get_recent_trades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">market_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dgtx.digitex_rest_core.model.exchange_recent_trade_list.ExchangeRecentTradeList</span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_recent_trades" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of recent trades at the exhchange for selected markets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>market_id</strong> – int - market id</p></li>
+<li><p><strong>max_trades</strong> – int - optional parameter to limit output to last max_trades</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>class ExchangeRecentTradeList</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;market_id&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+ <span class="s1">&#39;recent_trades&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;base_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;9364&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4E-8&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;quote_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.00037456&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632590930368437</span><span class="p">,</span>
+                    <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">169471322</span><span class="p">},</span>
+                   <span class="p">{</span><span class="s1">&#39;base_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3518&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7E-8&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;quote_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.00024626&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632590961604440</span><span class="p">,</span>
+                    <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">169471696</span><span class="p">}],</span>
+ <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632640603867893</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgtx.public.PublicApiClient.ping">
+<span class="sig-name descname"><span class="pre">ping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.ping.Ping</span><span class="p"><span class="pre">,</span> </span><span class="pre">dgtx.digitex_rest_core.exceptions.ApiException</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.ping" title="Permalink to this definition"></a></dt>
+<dd><p>Check if server is responding,
+also returns server time in milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>a data model of ping response. methods can be accessed with dot-notation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;pong&#39;</span><span class="p">,</span>
+<span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632567734971007</span><span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rest_api_endpoints.html" class="btn btn-neutral float-left" title="Rest API Endpoints" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="private.html" class="btn btn-neutral float-right" title="Private Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Digitex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

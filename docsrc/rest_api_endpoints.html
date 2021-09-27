@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<title>Rest API Endpoints</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="rest-api-endpoints">
+<h1 class="title">Rest API Endpoints</h1>
+
+<div class="section" id="public-endpoints">
+<h1>Public Endpoints</h1>
+<div class="section" id="id1">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.ping">Ping</a></h2>
+<p>Pings the Digitex server and returns server timestamp in microseconds.
+Is used only to check whether server is alive.</p>
+<pre class="code python literal-block">
+<span class="name">ping</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">ping</span><span class="punctuation">():</span>
+</pre>
+</div>
+<div class="section" id="id2">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_currencies">Currencies</a></h2>
+<p>Returns a list of currencies that the use can have a wallet at.</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1currency~1/get">Link to API description</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">currencies</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_currencies</span><span class="punctuation">(</span><span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">):</span>
+</pre>
+</div>
+<div class="section" id="id3">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_markets">Markets</a></h2>
+<p>Returns list of markets available to trade.</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1markets~1/get">Link to API description</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">markets</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_markets</span><span class="punctuation">(</span><span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">):</span>
+</pre>
+</div>
+<div class="section" id="id5">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_exchange_info">Exchange Information</a></h2>
+<p>Returns list of meta data of the exchange, such as list of currencies, list of markets
+and list of order parameters (ENUMS for order types, duration, etc).</p>
+<p>Using integer representation of order parameters is heavily used in our websocket api.
+At one moment in the future we will fully synchronise these two api's, hence we use
+same approach with order parameters as much as possible in this client. And yes, it would have been much easier to use string
+representation of orders and market names, yet string representation of 'BUY' is bigger in size
+then int 1.</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Exchange-Meta-Data/paths/~1v1~1exchange~1bot~1exchange_info~1/get">Link to API description</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">exchange_info</span> <span class="operator">=</span> <span class="name">get_exchange_info</span><span class="punctuation">()</span>
+</pre>
+</div>
+<div class="section" id="id7">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_order_book">Get Order Book</a></h2>
+<p>Returns order book of selected market</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1order_book~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">order_book</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">get_order_book</span><span class="punctuation">(</span><span class="name">market_id</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">):</span>
+</pre>
+</div>
+<div class="section" id="id8">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_recent_trades">Get Recent Trades</a></h2>
+<p>Get recent trades executed at the exchange for selected market</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1recent_trades~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">recent_trades</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">get_recent_trades</span><span class="punctuation">(</span><span class="name">market_id</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">,</span> <span class="name">max_trades</span><span class="operator">=</span><span class="literal number integer">5</span><span class="punctuation">):</span>
+</pre>
+</div>
+<div class="section" id="id10">
+<h2><a class="reference external" href="public.html#dgtx.public.PublicApiClient.get_k_lines">Get K-Lines / OHLCV values</a></h2>
+<p>Returns list of K-Lines / OHLCV values for selected market and selected resolution
+with optional date filters</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Public/paths/~1v1~1exchange~1bot~1history~1ohlcv~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">ohlcv</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_k_lines</span><span class="punctuation">(</span><span class="name">market_id</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">,</span> <span class="name">resolution</span><span class="operator">=</span><span class="literal string single">'1D'</span><span class="punctuation">)</span>
+</pre>
+</div>
+</div>
+<div class="section" id="private-endpoints">
+<h1>Private Endpoints</h1>
+<div class="section" id="id12">
+<h2><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_balance">Get Account Balance</a></h2>
+<p>Get trader's account balance. In addition to wallet balance, returns available balance per currency -
+balance that is available for trading</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1balances~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">my_balance</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_balance</span><span class="punctuation">()</span>
+</pre>
+</div>
+<div class="section" id="id14">
+<h2><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_position">Get Position</a></h2>
+<p>Shows current position of the trader in the futures market.</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1position~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">position</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_position</span><span class="punctuation">():</span>
+</pre>
+</div>
+<div class="section" id="id16">
+<h2><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_trade_history">Get Trade History</a></h2>
+<p>Returns paginated trade history</p>
+<blockquote>
+<a class="reference external" href="https://digitexofficial.github.io/rest-api-docs/#tag/Private/paths/~1v1~1exchange~1bot~1trade_history~1/get">Link to API</a></blockquote>
+<pre class="code python literal-block">
+<span class="name">trade_history</span> <span class="operator">=</span> <span class="name">client</span><span class="operator">.</span><span class="name">get_trade_history</span><span class="punctuation">(</span><span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id18">
+<h2><a class="reference external" href="private.html#dgtx.private.PrivateApiClient.get_order_history">Get Order History</a></h2>
+<p>Get order history</p>
+<pre class="code python literal-block">
+<span class="name">order_history</span>  <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">get_order_history</span><span class="punctuation">(</span><span class="name builtin pseudo">self</span><span class="punctuation">,</span> <span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id19">
+<h2><a class="reference external" href="private.html#digitex_bot_framework.private.PrivateApiClient.get_order_status">Get Order Status</a></h2>
+<p>Get order status</p>
+<pre class="code python literal-block">
+<span class="name">order_status</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">get_order_status</span><span class="punctuation">(</span><span class="name builtin pseudo">self</span><span class="punctuation">,</span> <span class="name">order_id</span><span class="punctuation">,</span> <span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id20">
+<h2><a class="reference external" href="private.html#digitex_bot_framework.private.PrivateApiClient.get_orders">Get Orders</a></h2>
+<p>Get all Orders</p>
+<pre class="code python literal-block">
+<span class="name">orders</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">get_orders</span><span class="punctuation">(</span><span class="name builtin pseudo">self</span><span class="punctuation">,</span> <span class="operator">**</span><span class="name">kwargs</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id21">
+<h2><a class="reference external" href="private.html#digitex_bot_framework.private.PrivateApiClient.post_order_create">Post Order Create</a></h2>
+<p>Create order</p>
+<pre class="code python literal-block">
+<span class="name">order_create</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">post_order_create</span><span class="punctuation">(</span><span class="name builtin pseudo">self</span><span class="punctuation">,</span> <span class="name">client_id</span><span class="punctuation">,</span> <span class="name">market_id</span><span class="punctuation">,</span> <span class="name">side</span><span class="punctuation">,</span> <span class="name builtin">type</span><span class="punctuation">,</span> <span class="name">duration</span><span class="punctuation">,</span> <span class="name">leverage</span><span class="punctuation">,</span> <span class="name">quantity</span><span class="punctuation">,</span> <span class="name">price</span><span class="punctuation">):</span>
+</pre>
+</div>
+<div class="section" id="id22">
+<h2><a class="reference external" href="private.html#digitex_bot_framework.private.PrivateApiClient.post_order_cancel">Post Order Cancel</a></h2>
+<p>Cancel order</p>
+<pre class="code python literal-block">
+<span class="name">order_cancel</span> <span class="operator">=</span> <span class="name">private</span><span class="operator">.</span><span class="name">post_order_cancel</span><span class="punctuation">(</span><span class="name builtin pseudo">self</span><span class="punctuation">,</span> <span class="name">orders_client_ids</span><span class="punctuation">:</span> <span class="name builtin">list</span> <span class="operator">=</span> <span class="keyword constant">None</span><span class="punctuation">,</span> <span class="name">market_id</span><span class="operator">=</span><span class="keyword constant">None</span><span class="punctuation">):</span>
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
