@@ -13,6 +13,7 @@ from dgtx.digitex_rest_core.model.bad_request_type import BadRequestType
 from dgtx.digitex_rest_core.model.balance import Balance
 from dgtx.digitex_rest_core.model.cancel_order import CancelOrder
 from dgtx.digitex_rest_core.model.currency import Currency
+from dgtx.digitex_rest_core.model.currency_pair import CurrencyPair
 from dgtx.digitex_rest_core.model.drf_generic_exception import DRFGenericException
 from dgtx.digitex_rest_core.model.exchange_info import ExchangeInfo
 from dgtx.digitex_rest_core.model.exchange_order_book import ExchangeOrderBook

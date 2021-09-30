@@ -46,7 +46,7 @@ class PublicApiClient(metaclass=ClientMeta):
         func = 'v1_exchange_bot_ping_get'
         return self.__make(func)
 
-    def get_currencies(self, **kwargs) -> Union[List[Currency], ApiException]:
+    def get_currencies(self, *args, **kwargs) -> Union[List[Currency], ApiException]:
         """
         Returns a list of walletable currencies with some extra params
 
@@ -88,7 +88,8 @@ class PublicApiClient(metaclass=ClientMeta):
         """
 
         func = 'v1_exchange_bot_currency_get'
-        return self.__make(func)(**kwargs)
+
+        return self.__make(func, *args, **kwargs)
 
     def get_order_book(self, market_id, **kwargs) -> ExchangeOrderBook:
         """
@@ -307,7 +308,12 @@ class PublicApiClient(metaclass=ClientMeta):
                                         'currency_scale': 4,
                                         'id': 7,
                                         'name': 'USD Coin',
-                                        'withdraw_fee': Decimal('100.000000000000000000')}
+                                        'withdraw_fee': Decimal('100.000000000000000000')},
+                    "tick_size": "5.000000000000000000",
+                    "tick_price": "0.100000000000000000",
+                    "tick_scale": 0
+
+
                 }
             ]
 
