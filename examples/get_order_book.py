@@ -1,5 +1,6 @@
 # add dgtx to path
 import sys
+
 sys.path.append('../.')
 
 from dgtx.client import Client
@@ -11,17 +12,18 @@ client = Client(
 )
 
 # get the list of markets
-markets = client.get_markets()
+markets = client.get_markets(market_id=1)
 
-# filter list of markets to get spot DGTXBTC
-spot_DGTXBTC = [i for i in markets if i.name == "DGTX/BTC"][0]
+print(markets)
 
-order_book = client.get_order_book(market_id=spot_DGTXBTC.id)
+order_book = client.get_order_book(market_id=markets[0].id)
 
 print(order_book)
 
 # return instance in most of the cases is a python class
 # which allows to access its properties directly
 if not isinstance(markets, ApiException):
-    print(f"Best ask for {spot_DGTXBTC.name} is\n"
-          f"{[min(order_book.asks, key=lambda ask:ask[0])][-1]}")
+    print(
+        f"Best ask for {markets[0].name} is\n"
+        f"{[min(order_book.asks, key=lambda ask: ask[0])][-1][0]}"
+    )
