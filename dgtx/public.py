@@ -38,12 +38,12 @@ class PublicApiClient(metaclass=ClientMeta):
 
             .. code-block:: python
 
-                {'message': 'pong',
-                'timestamp': 1632567734971007}
+                {"message": "pong",
+                "timestamp": 1632567734971007}
 
 
         """
-        func = 'v1_exchange_bot_ping_get'
+        func = "v1_exchange_bot_ping_get"
         return self.__make(func)
 
     def get_currencies(self, *args, **kwargs) -> Union[List[Currency], ApiException]:
@@ -71,23 +71,23 @@ class PublicApiClient(metaclass=ClientMeta):
         .. code-block:: python
 
             [
-                {'code': 'DGTX',
-                'currency_scale': 4,
-                'id': 1,
-                'name': 'Digitex',
-                'withdraw_fee': Decimal('100.000000000000000000')},
+                {"code": "DGTX",
+                "currency_scale": 4,
+                "id": 1,
+                "name": "Digitex",
+                "withdraw_fee": Decimal("100.000000000000000000")},
 
-                {'code': 'BTC',
-                'currency_scale': 8,
-                'id': 2,
-                'name': 'Bitcoin',
-                'withdraw_fee': Decimal('0.000050000000000000')}
+                {"code": "BTC",
+                "currency_scale": 8,
+                "id": 2,
+                "name": "Bitcoin",
+                "withdraw_fee": Decimal("0.000050000000000000")}
              ]
 
 
         """
 
-        func = 'v1_exchange_bot_currency_get'
+        func = "v1_exchange_bot_currency_get"
 
         return self.__make(func, *args, **kwargs)
 
@@ -101,21 +101,21 @@ class PublicApiClient(metaclass=ClientMeta):
 
         .. code-block:: python
 
-            {'asks': [[Decimal('2913'), Decimal('449')],
-                      [Decimal('2914'), Decimal('3430')],
-                      [Decimal('2915'), Decimal('2525')],
-                      [Decimal('2916'), Decimal('2738')],
-                      [Decimal('2928'), Decimal('3039')]],
-            'bids': [[Decimal('2910'), Decimal('4570')],
-                      [Decimal('2909'), Decimal('2050')],
-                      [Decimal('2079'), Decimal('8')],
-                      [Decimal('2076'), Decimal('1000')],
-                      [Decimal('1070'), Decimal('10')]],
-             'market_id': 2,
-             'timestamp': 1632571422798363}
+            {"asks": [[Decimal("2913"), Decimal("449")],
+                      [Decimal("2914"), Decimal("3430")],
+                      [Decimal("2915"), Decimal("2525")],
+                      [Decimal("2916"), Decimal("2738")],
+                      [Decimal("2928"), Decimal("3039")]],
+            "bids": [[Decimal("2910"), Decimal("4570")],
+                      [Decimal("2909"), Decimal("2050")],
+                      [Decimal("2079"), Decimal("8")],
+                      [Decimal("2076"), Decimal("1000")],
+                      [Decimal("1070"), Decimal("10")]],
+             "market_id": 2,
+             "timestamp": 1632571422798363}
 
         """
-        func = 'v1_exchange_bot_order_book_get'
+        func = "v1_exchange_bot_order_book_get"
         return self.__make(func, market_id, **kwargs)
 
     def get_recent_trades(self, market_id, **kwargs) -> ExchangeRecentTradeList:
@@ -130,24 +130,24 @@ class PublicApiClient(metaclass=ClientMeta):
 
         .. code-block:: python
 
-            {'market_id': 23,
-             'recent_trades': [{'base_volume': Decimal('9364'),
-                                'price': Decimal('4E-8'),
-                                'quote_volume': Decimal('0.00037456'),
-                                'side': 2,
-                                'timestamp': 1632590930368437,
-                                'trade_id': 169471322},
-                               {'base_volume': Decimal('3518'),
-                                'price': Decimal('7E-8'),
-                                'quote_volume': Decimal('0.00024626'),
-                                'side': 1,
-                                'timestamp': 1632590961604440,
-                                'trade_id': 169471696}],
-             'timestamp': 1632640603867893}
+            {"market_id": 23,
+             "recent_trades": [{"base_volume": Decimal("9364"),
+                                "price": Decimal("4E-8"),
+                                "quote_volume": Decimal("0.00037456"),
+                                "side": 2,
+                                "timestamp": 1632590930368437,
+                                "trade_id": 169471322},
+                               {"base_volume": Decimal("3518"),
+                                "price": Decimal("7E-8"),
+                                "quote_volume": Decimal("0.00024626"),
+                                "side": 1,
+                                "timestamp": 1632590961604440,
+                                "trade_id": 169471696}],
+             "timestamp": 1632640603867893}
 
         """
 
-        func = 'v1_exchange_bot_recent_trades_get'
+        func = "v1_exchange_bot_recent_trades_get"
         return self.__make(func, market_id, **kwargs)
 
 
@@ -169,6 +169,7 @@ class PublicApiClient(metaclass=ClientMeta):
         :return:
         .. code-block:: json
 
+
             [
                 {
                     "timestamp": 1617284280000000,
@@ -187,9 +188,10 @@ class PublicApiClient(metaclass=ClientMeta):
                     "volume": "315.000000000000000000"
                 }
             ]
+
         """
 
-        func = 'v1_exchange_bot_history_ohlcv_get'
+        func = "v1_exchange_bot_history_ohlcv_get"
         return self.__make(func, market_id=market_id, resolution=resolution, **kwargs)
 
 
@@ -202,82 +204,82 @@ class PublicApiClient(metaclass=ClientMeta):
         .. code-block:: python
 
             {
-            'currencies': # list of currencies, same as get currencies
+            "currencies": # list of currencies, same as get currencies
                 [
-                    {'code': 'DGTX',
-                    'currency_scale': 4,
-                    'id': 1,
-                    'name': 'Digitex',
-                    'withdraw_fee': Decimal('100.000000000000000000')},
+                    {"code": "DGTX",
+                    "currency_scale": 4,
+                    "id": 1,
+                    "name": "Digitex",
+                    "withdraw_fee": Decimal("100.000000000000000000")},
                 ...],
-            'markets': # list of markets, same as get markets
+            "markets": # list of markets, same as get markets
                 [
-                    {'base_currency': {'code': 'BTC',
-                                    'currency_scale': 8,
-                                    'id': 2,
-                                    'name': 'Bitcoin',
-                                    'withdraw_fee': Decimal('0.000050000000000000')},
-                    'code': 'S:BTCUSDC',
-                    'contract_currency': None,
-                    'description': 'BTC/USDC spot',
-                    'funding': '0E-18',
-                    'id': 18,
-                    'market_type': 2,
-                    'name': 'BTC/USDC',
-                    'quote_currency': {'code': 'USDC',
-                                     'currency_scale': 4,
-                                     'id': 7,
-                                     'name': 'USD Coin',
-                                     'withdraw_fee': Decimal('100.000000000000000000')}},
-                    {'base_currency': {'code': 'BTC',
-                                'currency_scale': 8,
-                                'id': 2,
-                                'name': 'Bitcoin',
-                                'withdraw_fee': Decimal('0.000050000000000000')},
-                    'code': 'FS:BTCUSD',
-                     'contract_currency': {'code': 'USDC',
-                                    'currency_scale': 4,
-                                    'id': 7,
-                                    'name': 'USD Coin',
-                                    'withdraw_fee': Decimal('100.000000000000000000')},
-                      'description': 'BTC/USD future nominated in USDC',
-                      'funding': Decimal('0.000300000000000000'),
-                      'id': 14,
-                      'market_type': 1,
-                      'name': 'BTC/USD USDC',
-                      'quote_currency': {'code': 'USD',
-                                         'currency_scale': 2,
-                                         'id': 3,
-                                         'name': 'USD',
-                                         'withdraw_fee': Decimal('100.000000000000000000')}},
+                    {"base_currency": {"code": "BTC",
+                                    "currency_scale": 8,
+                                    "id": 2,
+                                    "name": "Bitcoin",
+                                    "withdraw_fee": Decimal("0.000050000000000000")},
+                    "code": "S:BTCUSDC",
+                    "contract_currency": None,
+                    "description": "BTC/USDC spot",
+                    "funding": "0E-18",
+                    "id": 18,
+                    "market_type": 2,
+                    "name": "BTC/USDC",
+                    "quote_currency": {"code": "USDC",
+                                     "currency_scale": 4,
+                                     "id": 7,
+                                     "name": "USD Coin",
+                                     "withdraw_fee": Decimal("100.000000000000000000")}},
+                    {"base_currency": {"code": "BTC",
+                                "currency_scale": 8,
+                                "id": 2,
+                                "name": "Bitcoin",
+                                "withdraw_fee": Decimal("0.000050000000000000")},
+                    "code": "FS:BTCUSD",
+                     "contract_currency": {"code": "USDC",
+                                    "currency_scale": 4,
+                                    "id": 7,
+                                    "name": "USD Coin",
+                                    "withdraw_fee": Decimal("100.000000000000000000")},
+                      "description": "BTC/USD future nominated in USDC",
+                      "funding": Decimal("0.000300000000000000"),
+                      "id": 14,
+                      "market_type": 1,
+                      "name": "BTC/USD USDC",
+                      "quote_currency": {"code": "USD",
+                                         "currency_scale": 2,
+                                         "id": 3,
+                                         "name": "USD",
+                                         "withdraw_fee": Decimal("100.000000000000000000")}},
                     ...]
 
-            'notifications': [], // list of exchange announcements
+            "notifications": [], // list of exchange announcements
 
-            'order_meta': # order meta data
-                {'duration': {'DURATION_UNDEFINED': 0,
-                                         'FOK': 5,
-                                         'GFD': 1,
-                                         'GTC': 2,
-                                         'GTF': 3,
-                                         'IOC': 4},
-                'position': {'LONG': 1, 'SHORT': 2, 'UNDEFINED': 0},
-                'side': {'BUY': 1, 'SELL': 2},
-                'status': {'ACCEPTED': 2,
-                           'CANCELED': 4,
-                           'FILLED': 5,
-                           'PARTIAL': 6,
-                           'PENDING': 1,
-                           'REJECTED': 3},
-                'type': {'LIMIT': 1, 'MARKET': 2}},
-            'rate_limits': # not implemented at the moment, but will be soon
-                            [{'interval': 'SECOND', 'limit': 50},
-                             {'interval': 'MINUTE', 'limit': 500}],
-             'server_time': 1632607288438219}
+            "order_meta": # order meta data
+                {"duration": {"DURATION_UNDEFINED": 0,
+                                         "FOK": 5,
+                                         "GFD": 1,
+                                         "GTC": 2,
+                                         "GTF": 3,
+                                         "IOC": 4},
+                "position": {"LONG": 1, "SHORT": 2, "UNDEFINED": 0},
+                "side": {"BUY": 1, "SELL": 2},
+                "status": {"ACCEPTED": 2,
+                           "CANCELED": 4,
+                           "FILLED": 5,
+                           "PARTIAL": 6,
+                           "PENDING": 1,
+                           "REJECTED": 3},
+                "type": {"LIMIT": 1, "MARKET": 2}},
+            "rate_limits": # not implemented at the moment, but will be soon
+                            [{"interval": "SECOND", "limit": 50},
+                             {"interval": "MINUTE", "limit": 500}],
+             "server_time": 1632607288438219}
 
 
         """
-        func = 'v1_exchange_bot_exchange_info_get'
+        func = "v1_exchange_bot_exchange_info_get"
         return self.__make(func)
 
     def get_markets(self, **kwargs) -> List[Market]:
@@ -292,23 +294,23 @@ class PublicApiClient(metaclass=ClientMeta):
 
             [
                 {
-                    'base_currency': {'code': 'BTC',
-                                       'currency_scale': 8,
-                                       'id': 2,
-                                       'name': 'Bitcoin',
-                                       'withdraw_fee': Decimal('0.000050000000000000')},
-                     'code': 'S:BTCUSDC',
-                     'contract_currency': None,
-                     'description': 'BTC/USDC spot',
-                     'funding': Decimal('0E-18'),
-                     'id': 18,
-                     'market_type': 2,
-                     'name': 'BTC/USDC',
-                     'quote_currency': {'code': 'USDC',
-                                        'currency_scale': 4,
-                                        'id': 7,
-                                        'name': 'USD Coin',
-                                        'withdraw_fee': Decimal('100.000000000000000000')},
+                    "base_currency": {"code": "BTC",
+                                       "currency_scale": 8,
+                                       "id": 2,
+                                       "name": "Bitcoin",
+                                       "withdraw_fee": Decimal("0.000050000000000000")},
+                     "code": "S:BTCUSDC",
+                     "contract_currency": None,
+                     "description": "BTC/USDC spot",
+                     "funding": Decimal("0E-18"),
+                     "id": 18,
+                     "market_type": 2,
+                     "name": "BTC/USDC",
+                     "quote_currency": {"code": "USDC",
+                                        "currency_scale": 4,
+                                        "id": 7,
+                                        "name": "USD Coin",
+                                        "withdraw_fee": Decimal("100.000000000000000000")},
                     "tick_size": "5.000000000000000000",
                     "tick_price": "0.100000000000000000",
                     "tick_scale": 0
@@ -320,6 +322,6 @@ class PublicApiClient(metaclass=ClientMeta):
 
         """
 
-        func = 'v1_exchange_bot_markets_get'
+        func = "v1_exchange_bot_markets_get"
         return self.__make(func, **kwargs)
 

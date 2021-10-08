@@ -7,7 +7,7 @@ from dgtx.digitex_rest_core import ApiException
 
 client = Client(
     api_client=Client.testnet,
-    api_key='PUT-YOUR-API-TOKEN-HERE'
+    api_key='PUT-YOUR-TRADING-TOKEN-HERE'
 )
 
 # get the list of markets

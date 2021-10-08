@@ -168,7 +168,7 @@ class PrivateApi(object):
 
             Keyword Args:
                 created_at_from (int): Timestamp in microseconds. Filters for order created at or after this timestamp. [optional]
-                created_at_to (str): Timestamp in microseconds. Filters for orders created before this timestamp. [optional]
+                created_at_to (int): Timestamp in microseconds. Filters for orders created before this timestamp. [optional]
                 cursor (str): cursor for fetching pages. [optional]
                 market_id (int): Id of a market. [optional]
                 page_size (int): Amount of order displayed per page. [optional]
@@ -258,7 +258,7 @@ class PrivateApi(object):
                     'created_at_from':
                         (int,),
                     'created_at_to':
-                        (str,),
+                        (int,),
                     'cursor':
                         (str,),
                     'market_id':
