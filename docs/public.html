@@ -79,7 +79,7 @@
 <dd><p>Collection of methods that returns public information from the exchange</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="dgtx.public.PublicApiClient.get_currencies">
-<span class="sig-name descname"><span class="pre">get_currencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.currency.Currency</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">dgtx.digitex_rest_core.exceptions.ApiException</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_currencies" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_currencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dgtx.digitex_rest_core.model.currency.Currency</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">dgtx.digitex_rest_core.exceptions.ApiException</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgtx.public.PublicApiClient.get_currencies" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of walletable currencies with some extra params</p>
 <p>Each currency instance is a model with the following parameters:</p>
 <ul class="simple">
@@ -98,17 +98,17 @@
 </dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;DGTX&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Digitex&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+    <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;DGTX&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Digitex&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)},</span>
 
-    <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)}</span>
+    <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.000050000000000000&quot;</span><span class="p">)}</span>
  <span class="p">]</span>
 </pre></div>
 </div>
@@ -124,78 +124,78 @@
 </dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="s1">&#39;currencies&#39;</span><span class="p">:</span> <span class="c1"># list of currencies, same as get currencies</span>
+<span class="s2">&quot;currencies&quot;</span><span class="p">:</span> <span class="c1"># list of currencies, same as get currencies</span>
     <span class="p">[</span>
-        <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;DGTX&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Digitex&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+        <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;DGTX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Digitex&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)},</span>
     <span class="o">...</span><span class="p">],</span>
-<span class="s1">&#39;markets&#39;</span><span class="p">:</span> <span class="c1"># list of markets, same as get markets</span>
+<span class="s2">&quot;markets&quot;</span><span class="p">:</span> <span class="c1"># list of markets, same as get markets</span>
     <span class="p">[</span>
-        <span class="p">{</span><span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-                        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
-        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;S:BTCUSDC&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC spot&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="s1">&#39;0E-18&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-        <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-                         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-                         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)}},</span>
-        <span class="p">{</span><span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-                    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
-        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;FS:BTCUSD&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-                        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-                        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
-          <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USD future nominated in USDC&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000300000000000000&#39;</span><span class="p">),</span>
-          <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
-          <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-          <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USD USDC&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span>
-                             <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span>
-                             <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)}},</span>
+        <span class="p">{</span><span class="s2">&quot;base_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.000050000000000000&quot;</span><span class="p">)},</span>
+        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;S:BTCUSDC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contract_currency&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USDC spot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;funding&quot;</span><span class="p">:</span> <span class="s2">&quot;0E-18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="s2">&quot;market_type&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USDC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quote_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;USDC&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;USD Coin&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)}},</span>
+        <span class="p">{</span><span class="s2">&quot;base_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.000050000000000000&quot;</span><span class="p">)},</span>
+        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;FS:BTCUSD&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;contract_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;USDC&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;USD Coin&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)},</span>
+          <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USD future nominated in USDC&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;funding&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.000300000000000000&quot;</span><span class="p">),</span>
+          <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+          <span class="s2">&quot;market_type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USD USDC&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;quote_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)}},</span>
         <span class="o">...</span><span class="p">]</span>
 
-<span class="s1">&#39;notifications&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="o">//</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">exchange</span> <span class="n">announcements</span>
+<span class="s2">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="o">//</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">exchange</span> <span class="n">announcements</span>
 
-<span class="s1">&#39;order_meta&#39;</span><span class="p">:</span> <span class="c1"># order meta data</span>
-    <span class="p">{</span><span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DURATION_UNDEFINED&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                             <span class="s1">&#39;FOK&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-                             <span class="s1">&#39;GFD&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                             <span class="s1">&#39;GTC&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                             <span class="s1">&#39;GTF&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                             <span class="s1">&#39;IOC&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
-    <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;LONG&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SHORT&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;UNDEFINED&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
-    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;BUY&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SELL&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
-    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;ACCEPTED&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-               <span class="s1">&#39;CANCELED&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-               <span class="s1">&#39;FILLED&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-               <span class="s1">&#39;PARTIAL&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-               <span class="s1">&#39;PENDING&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-               <span class="s1">&#39;REJECTED&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
-    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;LIMIT&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;MARKET&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}},</span>
-<span class="s1">&#39;rate_limits&#39;</span><span class="p">:</span> <span class="c1"># not implemented at the moment, but will be soon</span>
-                <span class="p">[{</span><span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;SECOND&#39;</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>
-                 <span class="p">{</span><span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;MINUTE&#39;</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}],</span>
- <span class="s1">&#39;server_time&#39;</span><span class="p">:</span> <span class="mi">1632607288438219</span><span class="p">}</span>
+<span class="s2">&quot;order_meta&quot;</span><span class="p">:</span> <span class="c1"># order meta data</span>
+    <span class="p">{</span><span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;DURATION_UNDEFINED&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                             <span class="s2">&quot;FOK&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                             <span class="s2">&quot;GFD&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="s2">&quot;GTC&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s2">&quot;GTF&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                             <span class="s2">&quot;IOC&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;LONG&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SHORT&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;UNDEFINED&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s2">&quot;side&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;BUY&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SELL&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;ACCEPTED&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+               <span class="s2">&quot;CANCELED&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+               <span class="s2">&quot;FILLED&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+               <span class="s2">&quot;PARTIAL&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+               <span class="s2">&quot;PENDING&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="s2">&quot;REJECTED&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;LIMIT&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;MARKET&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}},</span>
+<span class="s2">&quot;rate_limits&quot;</span><span class="p">:</span> <span class="c1"># not implemented at the moment, but will be soon</span>
+                <span class="p">[{</span><span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="s2">&quot;SECOND&quot;</span><span class="p">,</span> <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>
+                 <span class="p">{</span><span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="s2">&quot;MINUTE&quot;</span><span class="p">,</span> <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}],</span>
+ <span class="s2">&quot;server_time&quot;</span><span class="p">:</span> <span class="mi">1632607288438219</span><span class="p">}</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -254,23 +254,23 @@
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">{</span>
-        <span class="s1">&#39;base_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-                           <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                           <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.000050000000000000&#39;</span><span class="p">)},</span>
-         <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;S:BTCUSDC&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;contract_currency&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-         <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC spot&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;funding&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0E-18&#39;</span><span class="p">),</span>
-         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-         <span class="s1">&#39;market_type&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;BTC/USDC&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;quote_currency&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="s1">&#39;USDC&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;currency_scale&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-                            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-                            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;USD Coin&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;withdraw_fee&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;100.000000000000000000&#39;</span><span class="p">)},</span>
+        <span class="s2">&quot;base_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                           <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                           <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.000050000000000000&quot;</span><span class="p">)},</span>
+         <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;S:BTCUSDC&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;contract_currency&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USDC spot&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;funding&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0E-18&quot;</span><span class="p">),</span>
+         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+         <span class="s2">&quot;market_type&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USDC&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;quote_currency&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;USDC&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;currency_scale&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;USD Coin&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;withdraw_fee&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;100.000000000000000000&quot;</span><span class="p">)},</span>
         <span class="s2">&quot;tick_size&quot;</span><span class="p">:</span> <span class="s2">&quot;5.000000000000000000&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tick_price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.100000000000000000&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tick_scale&quot;</span><span class="p">:</span> <span class="mi">0</span>
@@ -294,18 +294,18 @@
 <dd class="field-even"><p>class ExchangeOrderBook, asks/bids can be accessed with dot-notation</p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;asks&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2913&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;449&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2914&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3430&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2915&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2525&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2916&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2738&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2928&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3039&#39;</span><span class="p">)]],</span>
-<span class="s1">&#39;bids&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2910&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4570&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2909&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2050&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2079&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;8&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2076&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)],</span>
-          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1070&#39;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)]],</span>
- <span class="s1">&#39;market_id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
- <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632571422798363</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;asks&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2913&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;449&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2914&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;3430&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2915&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2525&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2916&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2738&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2928&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;3039&quot;</span><span class="p">)]],</span>
+<span class="s2">&quot;bids&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2910&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;4570&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2909&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2050&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2079&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;8&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;2076&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;1000&quot;</span><span class="p">)],</span>
+          <span class="p">[</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;1070&quot;</span><span class="p">),</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">)]],</span>
+ <span class="s2">&quot;market_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+ <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632571422798363</span><span class="p">}</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -325,20 +325,20 @@
 <dd class="field-even"><p>class ExchangeRecentTradeList</p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;market_id&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
- <span class="s1">&#39;recent_trades&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;base_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;9364&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4E-8&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;quote_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.00037456&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632590930368437</span><span class="p">,</span>
-                    <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">169471322</span><span class="p">},</span>
-                   <span class="p">{</span><span class="s1">&#39;base_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3518&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7E-8&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;quote_volume&#39;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.00024626&#39;</span><span class="p">),</span>
-                    <span class="s1">&#39;side&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632590961604440</span><span class="p">,</span>
-                    <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">169471696</span><span class="p">}],</span>
- <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632640603867893</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;market_id&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+ <span class="s2">&quot;recent_trades&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;base_volume&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;9364&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;4E-8&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;quote_volume&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.00037456&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;side&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632590930368437</span><span class="p">,</span>
+                    <span class="s2">&quot;trade_id&quot;</span><span class="p">:</span> <span class="mi">169471322</span><span class="p">},</span>
+                   <span class="p">{</span><span class="s2">&quot;base_volume&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;3518&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;7E-8&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;quote_volume&quot;</span><span class="p">:</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.00024626&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;side&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632590961604440</span><span class="p">,</span>
+                    <span class="s2">&quot;trade_id&quot;</span><span class="p">:</span> <span class="mi">169471696</span><span class="p">}],</span>
+ <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632640603867893</span><span class="p">}</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -351,8 +351,8 @@ also returns server time in milliseconds</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><p>a data model of ping response. methods can be accessed with dot-notation.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;pong&#39;</span><span class="p">,</span>
-<span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="mi">1632567734971007</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;pong&quot;</span><span class="p">,</span>
+<span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1632567734971007</span><span class="p">}</span>
 </pre></div>
 </div>
 </p>

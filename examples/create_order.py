@@ -12,7 +12,7 @@ from dgtx.extra_data_classes import PlaceOrderMeta
 
 client = Client(
     api_client=Client.testnet,
-    api_key='PUT-YOUR-API-TOKEN-HERE'
+    api_key='PUT-YOUR-TRADING-TOKEN-HERE'
 )
 
 # place order

@@ -8,10 +8,10 @@ from dgtx.digitex_rest_core import ApiException
 
 client = Client(
     api_client=Client.testnet,
-    api_key='PUT-YOUR-API-TOKEN-HERE'
+    api_key='PUT-YOUR-TRADING-TOKEN-HERE'
 )
 
-my_order = client.get_order_status(client_id='ec825f37-1af8-46ae-89d5-d2b0ffbdaf3f')
+my_order = client.get_order_status(client_id='1c15f652-e0f5-4cd0-a6b6-a17c29086b6e')
 print(my_order)
 
 # return instance in most of the cases is a python class
